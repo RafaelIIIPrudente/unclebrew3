@@ -14,8 +14,8 @@ export const inventoryRouter = createTRPCRouter({
     }
   }),
 
-   //Retrieves an inventory item by ID.
-  // @param {number} id - The ID of the inventory item to retrieve.
+  //Retrieves an inventory item by ID.
+  //{number} id - The ID of the inventory item to retrieve.
   getById: publicProcedure
     .input(z.object({ id: z.string() }))
     .query(async ({ input, ctx }) => {

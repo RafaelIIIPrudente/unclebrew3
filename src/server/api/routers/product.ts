@@ -15,7 +15,7 @@ export const productRouter = createTRPCRouter({
   }),
 
   // Retrieves a product by its ID from the database.
-  // @param {number} id - The ID of the product to retrieve.
+  //{number} id - The ID of the product to retrieve.
   getById: publicProcedure
     .input(z.object({ id: z.string() }))
     .query(async ({ input, ctx }) => {
@@ -31,7 +31,7 @@ export const productRouter = createTRPCRouter({
     }),
 
   // Creates a new product in the database.
-  // @param {Product} product - The product object to create.
+  // {Product} product - The product object to create.
   create: publicProcedure
     .input(
       z.object({
@@ -65,8 +65,8 @@ export const productRouter = createTRPCRouter({
     }),
 
   // Updates an existing product in the database.
-  // @param {string} id - The ID of the product to update.
-  // @param product - The updated product object.
+  // {string} id - The ID of the product to update.
+  // product - The updated product object.
   update: publicProcedure
     .input(
       z.object({
