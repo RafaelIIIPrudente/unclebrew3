@@ -17,10 +17,10 @@ model Inventory {
 model Product {
   id          String    @id @default(cuid())
   productName String    @unique
-  image       String?
-  quantity    Int
-  price       Float
-  description String?
+  image       String? 
+  quantity    Int       @default(0)
+  price       Float     @default(0)
+  description String?   
   inventory   Inventory @relation(fields: [inventoryId], references: [id])
   inventoryId String
 
